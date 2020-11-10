@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Group 9 Project 1</title>
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Fine-ding Dining</h1>
+          <p class="lead">This application will search for food in your area!</p>
+          <img src="Images/Logo.png" alt="a location symbol with a fork, knife, and a plate" class="logo" />
+        </div>
+        
+      </div>
+      <!-- form from bootstrap to help with -->
+      <!-- zip code (required) -->
+      <!-- restaurant type (optional) -->
+      <!-- restaurant name (optional) -->
+      <!-- carryout/delivery? (checkboxes) -->
+      <div class="row">
+        <form class="col-sm-3 searchForm">
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><mark>Restaurant Name (no spaces! See example)</mark></label>
+            <input type="Name" class="form-control" id="restaurantName" placeholder="Olivegarden" />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><mark>Restaurant Type (no spaces!)</mark></label>
+            <input type="Cuisine" class="form-control" id="cuisine" placeholder="Italian" />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><mark>zipcode you are looking for (REQUIRED)</mark></label>
+            <input type="zipcode" class="form-control" id="zipcode" placeholder="44129" />
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="carryout" />
+            <label class="form-check-label" for="defaultCheck1">
+              <mark>Carryout</mark>
+            </label>
+          </div>
+          <div class="row">
+            <input class="btn btn-primary submitBtn" type="submit" value="Submit" />
+            <button type="button" class="btn btn-warning resetBtn">Reset</button>
+          </div>
+        </form>
+
+        <!-- card for the weather api -->
+        <!-- current temperature -->
+        <!-- current temp feels like? -->
+        <!-- description of weather -->
+        <!-- windy? -->
+        <div class="col-md-6"></div>
+        <div class="card col-sm-3 weatherForm">
+          <div class="card-header city">Weather</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item tempF">temperature</li>
+            <li class="list-group-item feelsLike">temperature feels like</li>
+            <li class="list-group-item description">description</li>
+            <li class="list-group-item wind">wind speed</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- container for the map -->
+      <div id="map" class="map"></div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="./js/map.js"></script>
+
+  <script type="text/javascript" src="./js/button.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsfk5uokgV_Uu1XpzgMO3OAGaElsVqOw&callback=initMap" type="text/javascript"></script>
+
+  <script type="text/javascript" src="./js/ajax.js"></script>
+</html>
