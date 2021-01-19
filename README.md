@@ -21,7 +21,7 @@ To reset the app, click the reset button and re-enter the data.
 
 ### App screenshot
 
-![AppPhoto](./Assets/image.png)   
+![AppPhoto](./Assets/image)   
 
 ## Table of contents
 
